@@ -79,7 +79,7 @@ public abstract class Permutation<T extends GoodsItem> {
     public final static int SUPPORTEDSIZE = 7;
 
     static{
-        //前置计算 1-SUPPORTEDSIZE 之间所有排列组合
+        //前置计算 1-SUPPORTEDSIZE 之间的所有排列组合
         for(byte i=1;i<=SUPPORTEDSIZE;i++){
             PERMUTATIONS.put((int)i,Collections2.permutations(IntStream.range(0,i).boxed()
                     .map(x->(byte)x.intValue()).collect(Collectors.toList())));
